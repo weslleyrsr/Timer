@@ -58,8 +58,13 @@ export default defineComponent({
 </script>
 
 <style>
+html {
+  overflow: hidden;
+}
 .list {
   padding: 1.25rem;
+  max-height: calc(100vh - 104px);
+  overflow: auto;
 }
 main {
   --bg-primario: #fff;
