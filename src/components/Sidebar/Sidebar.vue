@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>
-      <img src="../../assets/logo.png" alt="">
+      <img style="border-radius: 30px;" src="../../assets/logo.png" alt="">
     </h1>
     <button class="button" @click="switchTheme">
       {{ buttonText }}
