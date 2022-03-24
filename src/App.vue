@@ -1,11 +1,9 @@
 <template>
-  <!-- <main class="columns is-gapless is-multiline" :class="{ 'modo-escuro': modoEscuroAtivo }"> -->
-  <main class="columns is-gapless is-multiline">
+   <main class="columns is-gapless is-multiline" :class="{ 'dark-theme': darkTheme }">
     <div class="column is-one-quarter">
-      <!-- <BarraLateral @aoTemaAlterado="trocarTema"/> -->
-      Sidebar
+       <Sidebar @switchTheme="handleSwitchTheme"/>
     </div>
-    <div class="column is-three-quarter conteudo">
+    <div class="column is-three-quarter content">
          <Form @finishTask="saveTask"/>
         <div class="lista">
             <Task v-for="(task, index) in tasks" :key="index" :task="task"/>
@@ -22,6 +20,7 @@ import { defineComponent } from "vue";
 import Box from "./components/List/Box.vue";
 import Task from "./components/List/Task.vue";
 import Form from "./components/Form/Form.vue";
+import Sidebar from "./components/Sidebar/Sidebar.vue";
 import { Task as ITask } from './interfaces/Task';
 
 
@@ -29,7 +28,8 @@ export default defineComponent({
     name: "App",
     data() {
         return {
-            tasks: [] as ITask[]
+            tasks: [] as ITask[],
+            darkTheme: false
         }
     },
     methods: {
@@ -38,6 +38,9 @@ export default defineComponent({
           description,
           timeInSeconds
         })
+      },
+      handleSwitchTheme(darkTheme: boolean) {
+        this.darkTheme = darkTheme;
       }
     },
     computed: {
@@ -48,7 +51,8 @@ export default defineComponent({
     components: {
         Box,
         Task,
-        Form
+        Form,
+        Sidebar
     },
 });
 </script>
@@ -61,11 +65,11 @@ main {
   --bg-primario: #fff;
   --texto-primario: #000;
 }
-main.modo-escuro {
+main.dark-theme {
   --bg-primario: #2b2d42;
   --texto-primario: #ddd;
 }
-.conteudo {
+.content {
   background-color: var(--bg-primario);
 }
 </style>

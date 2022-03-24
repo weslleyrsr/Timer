@@ -33,3 +33,10 @@ let finishTask = (timeInSeconds: number): void => {
   emit('finishTask', task.description, timeInSeconds)
 }
 </script>
+
+<style>
+.formulario {
+  color: var(--texto-primario);
+  background-color: var(--bg-primario);
+}
+</style>
