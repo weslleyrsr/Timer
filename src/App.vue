@@ -63,13 +63,17 @@ export default defineComponent({
 }
 main {
   --bg-primario: #fff;
+  --bg-primario--aux: #f7f7f7;
+  --bg-secundario: #efefef;
   --texto-primario: #000;
 }
 main.dark-theme {
-  --bg-primario: #2b2d42;
+  --bg-primario: #2a2a2a;
+  --bg-primario--aux: #262626;
+  --bg-secundario: #1b1d1e;
   --texto-primario: #939393;
 }
 .content {
-  background-color: var(--bg-primario);
+  background-color: var(--bg-primario--aux);
 }
 </style>
