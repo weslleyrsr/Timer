@@ -93,4 +93,21 @@ main.dark-theme {
 .content {
   background-color: var(--bg-primario--aux);
 }
+
+@media only screen and (max-width: 768px) {
+    html {
+        overflow: auto;
+    }
+    .list-header {
+        padding: 0 15px;
+        color: var(--texto-primario);
+        display: none;
+    }
+
+    .list {
+        padding: 1.25rem;
+        max-height: unset;
+        overflow: auto;
+    }
+}
 </style>
