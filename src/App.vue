@@ -1,6 +1,6 @@
 <template>
    <main class="columns is-gapless is-multiline" :class="{ 'dark-theme': darkTheme }">
-    <div class="column is-one-quarter">
+    <div class="column is-one-quarter" style="z-index: 2;">
        <Sidebar @switchTheme="handleSwitchTheme"/>
     </div>
     <div class="column is-three-quarter content">
@@ -64,7 +64,7 @@ export default defineComponent({
 main {
   --bg-primario: #fff;
   --bg-primario--aux: #f7f7f7;
-  --bg-secundario: #efefef;
+  --bg-secundario: #fff;
   --texto-primario: #000;
 }
 main.dark-theme {
