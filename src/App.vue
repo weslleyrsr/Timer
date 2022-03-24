@@ -6,6 +6,11 @@
     <div class="column is-three-quarter content">
          <Form @finishTask="saveTask"/>
         <div class="list">
+          <div class="columns list-header">
+            <div class="column is-5">Task</div>
+            <div class="column is-4">Time</div>
+            <div class="column is-3">Start</div>
+          </div>
             <Task v-for="(task, index) in tasks" :key="index" :task="task"/>
             <Box v-if="emptyList">
                 You're not very productive today :(
@@ -33,10 +38,11 @@ export default defineComponent({
         }
     },
     methods: {
-      saveTask(description: string, timeInSeconds: number) {
+      saveTask(description: string, timeInSeconds: number, timerStarted: Date) {
         this.tasks.push({
           description,
-          timeInSeconds
+          timeInSeconds,
+          start: timerStarted
         })
       },
       handleSwitchTheme(darkTheme: boolean) {
@@ -65,6 +71,9 @@ html {
   padding: 1.25rem;
   max-height: calc(100vh - 104px);
   overflow: auto;
+}
+.list-header {
+  padding: 0 15px;
 }
 main {
   --bg-primario: #fff;

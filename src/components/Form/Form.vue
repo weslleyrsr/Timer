@@ -29,8 +29,8 @@ const task = reactive({
   description: ''
 })
 
-let finishTask = (timeInSeconds: number): void => {
-  emit('finishTask', task.description, timeInSeconds)
+let finishTask = (timeInSeconds: number, timerStarted: Date): void => {
+  emit('finishTask', task.description, timeInSeconds, timerStarted)
 }
 </script>
 

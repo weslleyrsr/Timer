@@ -24,11 +24,13 @@ const emit = defineEmits(['finishTask']);
 const state = reactive({
   timeInSeconds: 0,
   timerRunning: false,
-  timer: 0
+  timer: 0,
+  timerStarted: new Date()
 });
 
 let start = () => {
   state.timerRunning = true;
+  state.timerStarted = new Date();
   state.timer = setInterval(() => {
     state.timeInSeconds += 1
   }, 1000)
@@ -37,7 +39,7 @@ let start = () => {
 let stop = (): void => {
   state.timerRunning = false;
   clearInterval(state.timer);
-  emit('finishTask', state.timeInSeconds);
+  emit('finishTask', state.timeInSeconds, state.timerStarted);
   state.timeInSeconds = 0;
 };
 </script>

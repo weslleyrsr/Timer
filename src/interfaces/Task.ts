@@ -1,4 +1,5 @@
 export interface Task {
     description: string,
-    timeInSeconds: number
+    timeInSeconds: number,
+    start: Date
 }
