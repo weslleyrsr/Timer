@@ -67,7 +67,7 @@ main {
 }
 main.dark-theme {
   --bg-primario: #2b2d42;
-  --texto-primario: #ddd;
+  --texto-primario: #939393;
 }
 .content {
   background-color: var(--bg-primario);
