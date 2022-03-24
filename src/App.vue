@@ -5,7 +5,7 @@
     </div>
     <div class="column is-three-quarter content">
          <Form @finishTask="saveTask"/>
-        <div class="lista">
+        <div class="list">
             <Task v-for="(task, index) in tasks" :key="index" :task="task"/>
             <Box v-if="emptyList">
                 You're not very productive today :(
@@ -58,7 +58,7 @@ export default defineComponent({
 </script>
 
 <style>
-.lista {
+.list {
   padding: 1.25rem;
 }
 main {

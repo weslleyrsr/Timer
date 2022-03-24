@@ -1,11 +1,11 @@
 <template>
-  <div class="box has-text-weight-bold" :style="estilos">
+  <div class="box has-text-weight-bold" :style="styles">
     <slot></slot>
   </div>
 </template>
 
 <script setup lang="ts">
-    const estilos = {
+    const styles = {
         backgroundColor: '#FAF0CA'
     }
 </script>

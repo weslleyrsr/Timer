@@ -5,13 +5,13 @@
       <span class="icon">
         <i class="fas fa-play"></i>
       </span>
-      <span>play</span>
+      <span>Play</span>
     </button>
     <button class="button" @click="stop" :disabled="!state.timerRunning">
       <span class="icon">
         <i class="fas fa-stop"></i>
       </span>
-      <span>stop</span>
+      <span>Stop</span>
     </button>
   </div>
 </template>

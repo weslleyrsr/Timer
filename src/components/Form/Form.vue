@@ -1,5 +1,5 @@
 <template>
-  <div class="box formulario">
+  <div class="box form">
     <div class="columns">
       <div
           class="column is-8"
@@ -35,7 +35,7 @@ let finishTask = (timeInSeconds: number): void => {
 </script>
 
 <style>
-.formulario {
+.form {
   color: var(--texto-primario);
   background-color: var(--bg-primario);
 }
