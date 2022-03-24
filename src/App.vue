@@ -6,15 +6,17 @@
     <div class="column is-three-quarter content">
          <Form @finishTask="saveTask"/>
         <div class="list">
-          <div class="columns has-text-weight-bold list-header">
-            <div class="column is-5">Task</div>
-            <div class="column is-4">Time</div>
-            <div class="column is-3">Start</div>
-          </div>
-            <Task v-for="(task, index) in tasks" :key="index" :task="task"/>
             <Box v-if="emptyList">
                 You're not very productive today :(
             </Box>
+            <template v-else>
+                <div class="columns has-text-weight-bold list-header">
+                    <div class="column is-5">Task</div>
+                    <div class="column is-4">Time</div>
+                    <div class="column is-3">Start</div>
+                </div>
+                <Task v-for="(task, index) in tasks" :key="index" :task="task"/>
+            </template>
       </div>
     </div>
   </main>
