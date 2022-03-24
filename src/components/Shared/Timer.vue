@@ -1,8 +1,8 @@
 <template>
   <section>
-    <strong class="display">
+    <p class="display">
       {{ time }}
-    </strong>
+    </p>
   </section>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="box has-text-weight-bold" :style="styles">
+  <div class="box" :style="styles">
     <slot></slot>
   </div>
 </template>

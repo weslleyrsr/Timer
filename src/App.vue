@@ -6,7 +6,7 @@
     <div class="column is-three-quarter content">
          <Form @finishTask="saveTask"/>
         <div class="list">
-          <div class="columns list-header">
+          <div class="columns has-text-weight-bold list-header">
             <div class="column is-5">Task</div>
             <div class="column is-4">Time</div>
             <div class="column is-3">Start</div>
@@ -74,6 +74,7 @@ html {
 }
 .list-header {
   padding: 0 15px;
+  color: var(--texto-primario);
 }
 main {
   --bg-primario: #fff;
