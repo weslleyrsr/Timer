@@ -35,6 +35,9 @@ header {
   width: 100%;
   height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 768px) {
   header {
