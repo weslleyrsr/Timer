@@ -1,6 +1,6 @@
 <template>
    <main class="columns is-gapless is-multiline" :class="{ 'dark-theme': darkTheme }">
-    <div class="column is-one-quarter" style="z-index: 2;">
+    <div class="column is-one-quarter sidebar-wrapper">
        <Sidebar @switchTheme="handleSwitchTheme"/>
     </div>
     <div class="column is-three-quarter content">
@@ -68,6 +68,10 @@ export default defineComponent({
 <style>
 html {
   overflow: hidden;
+}
+.sidebar-wrapper {
+    z-index: 2;
+    border-right: 1px solid #ececec;
 }
 .list {
   padding: 1.25rem;
