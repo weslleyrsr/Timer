@@ -1,7 +1,8 @@
 <template>
 	<header>
 		<h1>
-			<img style="border-radius: 30px;" src="../../assets/logo.png" alt />
+			Tracker
+			<!-- <img style="border-radius: 30px;" src="../../assets/logo.png" alt /> -->
 		</h1>
 		<aside class="menu">
 			<ul class="menu-list">
@@ -17,7 +18,7 @@
 				</li>
 			</ul>
 		</aside>
-		<button class="button" @click="switchTheme">{{ buttonText }}</button>
+		<button class="button --transparent" @click="switchTheme">{{ buttonText }}</button>
 	</header>
 </template>
 
@@ -56,6 +57,13 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+	}
+
+	header h1 {
+		text-transform: uppercase;
+		font-size: 2rem;
+		margin-bottom: 32px;
+		color: var(--texto-primario);
 	}
 
 	.menu {

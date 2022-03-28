@@ -4,7 +4,7 @@
 			<div class="column is-8" role="form" aria-label="Form to create a new task">
 				<input
 					type="text"
-					class="input"
+					class="input --transparent"
 					placeholder="Which task tou wan to start?"
 					v-model="task.description"
 				/>

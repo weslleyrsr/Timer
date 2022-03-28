@@ -49,10 +49,19 @@ main.dark-theme {
 	--bg-primario: #2a2a2a;
 	--bg-primario--aux: #262626;
 	--bg-secundario: #1b1d1e;
-	--texto-primario: #939393;
+	--texto-primario: #afafaf;
 }
 .content {
 	background-color: var(--bg-primario--aux);
+}
+
+.--transparent {
+	background: transparent;
+	color: var(--texto-primario)
+}
+
+.--transparent::placeholder {
+	color: var(--texto-primario)
 }
 
 @media only screen and (max-width: 768px) {
