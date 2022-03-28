@@ -57,11 +57,12 @@ main.dark-theme {
 
 .--transparent {
 	background: transparent;
-	color: var(--texto-primario)
+	color: var(--texto-primario);
 }
 
 .--transparent::placeholder {
-	color: var(--texto-primario)
+	color: var(--texto-primario);
+	opacity: 0.7;
 }
 
 @media only screen and (max-width: 768px) {
