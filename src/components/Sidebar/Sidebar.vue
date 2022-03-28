@@ -1,48 +1,80 @@
 <template>
-  <header>
-    <h1>
-      <img style="border-radius: 30px;" src="../../assets/logo.png" alt="">
-    </h1>
-    <button class="button" @click="switchTheme">
-      {{ buttonText }}
-    </button>
-  </header>
+	<header>
+		<h1>
+			<img style="border-radius: 30px;" src="../../assets/logo.png" alt />
+		</h1>
+		<aside class="menu">
+			<ul class="menu-list">
+				<li v-for="(route, index) in routes" :key="index">
+					<router-link
+						:to="route.path"
+						class="navbar-item"
+						:class="{ 'is-active': route.name === currentRoute.name }"
+					>
+						<span>{{ route.name }}</span>
+						<i :class="route.meta.icon"></i>
+					</router-link>
+				</li>
+			</ul>
+		</aside>
+		<button class="button" @click="switchTheme">{{ buttonText }}</button>
+	</header>
 </template>
 
 <script setup lang="ts">
-import { reactive, computed, defineEmits } from 'vue';
+	import { reactive, computed, defineEmits } from 'vue';
+	import { useRouter, useRoute } from 'vue-router'
 
-const emit = defineEmits(['switchTheme'])
+	const router = useRouter()
 
-const state = reactive({
-  darkTheme: false
-})
+	const routes = router.getRoutes()
+	let currentRoute = router.currentRoute;
 
-const buttonText = computed(() => {
-  return `Switch to ${state.darkTheme ? 'light' : 'dark'} theme`;
-})
+	const emit = defineEmits(['switchTheme'])
 
-const switchTheme = () => {
-  state.darkTheme = !state.darkTheme;
-  emit('switchTheme', state.darkTheme);
-}
+	const state = reactive({
+		darkTheme: false
+	})
+
+	const buttonText = computed(() => {
+		return `Switch to ${state.darkTheme ? 'light' : 'dark'} theme`;
+	})
+
+	const switchTheme = () => {
+		state.darkTheme = !state.darkTheme;
+		emit('switchTheme', state.darkTheme);
+	}
 </script>
 
 <style scoped>
-header {
-  padding: 1rem;
-  background: var(--bg-secundario);
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media only screen and (max-width: 768px) {
-  header {
-    padding: 2.5rem;
-    height: auto;
-  }
-}
+	header {
+		padding: 1rem;
+		background: var(--bg-secundario);
+		width: 100%;
+		height: 100vh;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.menu {
+		flex-grow: 1;
+	}
+
+	.menu ul {
+		text-align: right;
+		text-transform: uppercase;
+	}
+
+	.menu ul li span {
+		padding-right: 10px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		header {
+			padding: 2.5rem;
+			height: auto;
+		}
+	}
 </style>

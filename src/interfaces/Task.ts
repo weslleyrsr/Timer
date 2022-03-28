@@ -1,5 +1,5 @@
 export interface Task {
-    description: string,
-    timeInSeconds: number,
-    start: Date
+	description: string,
+	timeInSeconds: number,
+	start: Date
 }
