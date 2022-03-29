@@ -42,13 +42,13 @@ html {
 main {
 	--bg-primary: #fff;
 	--bg-primary--aux: #f7f7f7;
-	--bg-secundary: #fff;
+	--bg-secondary: #fff;
 	--text-primary: #000;
 }
 main.dark-theme {
 	--bg-primary: #2a2a2a;
 	--bg-primary--aux: #262626;
-	--bg-secundary: #1b1d1e;
+	--bg-secondary: #1b1d1e;
 	--text-primary: #afafaf;
 }
 .content {

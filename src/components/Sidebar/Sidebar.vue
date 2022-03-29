@@ -50,7 +50,7 @@
 <style scoped>
 	header {
 		padding: 1rem;
-		background: var(--bg-secundario);
+		background: var(--bg-secondary);
 		width: 100%;
 		height: 100vh;
 		text-align: center;
