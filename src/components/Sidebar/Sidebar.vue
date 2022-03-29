@@ -9,8 +9,8 @@
 				<li v-for="(route, index) in routes" :key="index">
 					<router-link
 						:to="route.path"
-						class="navbar-item"
-						:class="{ 'is-active': route.name === currentRoute.name }"
+						class="navbar-item menu-item"
+						:class="{ 'test': route.name === currentRoute.name }"
 					>
 						<span>{{ route.name }}</span>
 						<i :class="route.meta.icon"></i>
@@ -64,6 +64,11 @@
 		font-size: 2rem;
 		margin-bottom: 32px;
 		color: var(--text-primary);
+	}
+
+	.test, .menu-item:hover, .menu-item:focus {
+		color: #485fc7;
+		background-color: var(--bg-secondary--aux);
 	}
 
 	.menu {
