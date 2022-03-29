@@ -6,6 +6,6 @@
 
 <script setup lang="ts">
 const styles = {
-	backgroundColor: '#FAF0CA'
+	backgroundColor: 'var(--bg-secondary--aux)'
 }
 </script>

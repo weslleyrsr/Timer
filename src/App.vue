@@ -37,18 +37,20 @@ html {
 }
 .sidebar-wrapper {
 	z-index: 2;
-	border-right: 1px solid #ececec;
+	border-right: 1px solid #747474;
 }
 main {
 	--bg-primary: #fff;
 	--bg-primary--aux: #f7f7f7;
 	--bg-secondary: #fff;
+	--bg-secondary--aux: rgb(233 233 233);
 	--text-primary: #000;
 }
 main.dark-theme {
 	--bg-primary: #2a2a2a;
 	--bg-primary--aux: #262626;
 	--bg-secondary: #1b1d1e;
+	--bg-secondary--aux: rgb(42 42 42);
 	--text-primary: #afafaf;
 }
 .content {
