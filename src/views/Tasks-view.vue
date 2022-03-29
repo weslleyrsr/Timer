@@ -61,7 +61,7 @@ export default defineComponent({
 }
 .list-header {
 	padding: 0 2rem;
-	color: var(--texto-primario);
+	color: var(--text-primary);
 }
 
 @media only screen and (max-width: 768px) {
@@ -70,7 +70,7 @@ export default defineComponent({
 	}
 	.list-header {
 		padding: 0 15px;
-		color: var(--texto-primario);
+		color: var(--text-primary);
 		display: none;
 	}
 

@@ -40,28 +40,29 @@ html {
 	border-right: 1px solid #ececec;
 }
 main {
-	--bg-primario: #fff;
-	--bg-primario--aux: #f7f7f7;
-	--bg-secundario: #fff;
-	--texto-primario: #000;
+	--bg-primary: #fff;
+	--bg-primary--aux: #f7f7f7;
+	--bg-secundary: #fff;
+	--text-primary: #000;
 }
 main.dark-theme {
-	--bg-primario: #2a2a2a;
-	--bg-primario--aux: #262626;
-	--bg-secundario: #1b1d1e;
-	--texto-primario: #afafaf;
+	--bg-primary: #2a2a2a;
+	--bg-primary--aux: #262626;
+	--bg-secundary: #1b1d1e;
+	--text-primary: #afafaf;
 }
 .content {
-	background-color: var(--bg-primario--aux);
+	background-color: var(--bg-primary--aux);
+	color: var(--text-primary);
 }
 
 .--transparent {
 	background: transparent;
-	color: var(--texto-primario);
+	color: var(--text-primary);
 }
 
 .--transparent::placeholder {
-	color: var(--texto-primario);
+	color: var(--text-primary);
 	opacity: 0.7;
 }
 

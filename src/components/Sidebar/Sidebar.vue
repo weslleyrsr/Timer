@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 	import { reactive, computed, defineEmits } from 'vue';
-	import { useRouter, useRoute } from 'vue-router'
+	import { useRouter } from 'vue-router'
 
 	const router = useRouter()
 
@@ -63,7 +63,7 @@
 		text-transform: uppercase;
 		font-size: 2rem;
 		margin-bottom: 32px;
-		color: var(--texto-primario);
+		color: var(--text-primary);
 	}
 
 	.menu {

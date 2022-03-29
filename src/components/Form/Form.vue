@@ -32,8 +32,8 @@ let finishTask = (timeInSeconds: number, timerStarted: Date): void => {
 
 <style>
 .form {
-	color: var(--texto-primario);
-	background-color: var(--bg-primario);
+	color: var(--text-primary);
+	background-color: var(--bg-primary);
 	border-radius: 0;
 }
 </style>

@@ -23,6 +23,6 @@ defineProps<{
 
 <style>
 .wrapper {
-	color: var(--texto-primario);
+	color: var(--text-primary);
 }
 </style>

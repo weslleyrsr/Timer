@@ -19,6 +19,6 @@ let time = computed((): string => {
 
 <style scoped>
 .display {
-	color: var(--texto-primario);
+	color: var(--text-primary);
 }
 </style>
