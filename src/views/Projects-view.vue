@@ -1,7 +1,9 @@
-<template><p> &#128640;&#128679; {{ message }} </p></template>
+<template><p> &#128640;&#128679; {{ store.state.workInProgressMessage }} </p></template>
 
 <script setup lang="ts">
-	let message = 'Work in Progress!! Check again later';
+	import { useStore } from 'vuex'
+
+	const store = useStore()
 </script>
 
 <style scoped>

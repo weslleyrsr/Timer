@@ -28,7 +28,7 @@ const state = reactive({
 	timerStarted: new Date()
 });
 
-let start = () => {
+let start = (): void => {
 	state.timerRunning = true;
 	state.timerStarted = new Date();
 	state.timer = setInterval(() => {
