@@ -5,7 +5,7 @@
 			<span class="icon">
 				<i class="fas fa-play"></i>
 			</span>
-			<span>Play</span>
+			<span>Start</span>
 		</button>
 		<button class="button" @click="stop" :disabled="!state.timerRunning">
 			<span class="icon">
