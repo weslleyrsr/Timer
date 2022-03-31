@@ -1,5 +1,5 @@
 <template>
-	<div class="is-flex is-align-items-center is-justify-content-space-between">
+	<div class="is-flex is-align-items-center is-justify-content-space-between" style="gap: 16px;">
 		<Timer :timeInSeconds="state.timeInSeconds" />
 		<button class="button" @click="start" :disabled="state.timerRunning">
 			<span class="icon">

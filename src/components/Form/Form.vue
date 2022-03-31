@@ -1,7 +1,7 @@
 <template>
 	<div class="box form">
 		<div class="columns">
-			<div class="column is-8 is-flex" role="form" aria-label="Form to create a new task">
+			<div class="column is-flex-grow-1 is-flex" style="gap: 16px;" role="form" aria-label="Form to create a new task">
 				<div class="select">
 					<select v-model="task.project">
 						<option value="0">Select a project</option>
@@ -15,7 +15,7 @@
 					v-model="task.description"
 				/>
 			</div>
-			<div class="column">
+			<div class="column is-flex-grow-0">
 				<TimeControl @finishTask="finishTask" />
 			</div>
 		</div>
