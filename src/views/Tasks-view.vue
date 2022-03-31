@@ -7,8 +7,9 @@
 	</template>
 	<template v-else>
 		<div class="columns has-text-weight-bold list-header" style="margin-bottom: 0">
-			<div class="column is-5">Task</div>
-			<div class="column is-4">Time</div>
+			<div class="column is-3">Project</div>
+			<div class="column is-3">Task</div>
+			<div class="column is-3">Time</div>
 			<div class="column is-3">Start</div>
 		</div>
 		<div class="list">
@@ -19,22 +20,23 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { useStore } from 'vuex'
 import Box from "../components/List/Box.vue";
 import Task from "../components/List/Task.vue";
 import Form from "../components/Form/Form.vue";
 import { Task as ITask } from '../interfaces/Task';
+import Project from "@/interfaces/Project";
 
 export default defineComponent({
 	name: "TimerView",
 	data() {
-		return {
-			tasks: [] as ITask[]
-		}
+		return {}
 	},
 	methods: {
-		saveTask(description: string, timeInSeconds: number, timerStarted: Date) {
-			this.tasks.push({
+		saveTask(description: string, project: Project | null, timeInSeconds: number, timerStarted: Date) {
+			this.store.commit('addTask', {
 				description,
+				project,
 				timeInSeconds,
 				start: timerStarted
 			})
@@ -43,6 +45,9 @@ export default defineComponent({
 	computed: {
 		emptyList(): boolean {
 			return this.tasks.length === 0
+		},
+		tasks(): ITask[] {
+			return this.store.state.tasks
 		}
 	},
 	components: {
@@ -50,6 +55,13 @@ export default defineComponent({
 		Task,
 		Form
 	},
+	setup() {
+		const store = useStore()
+
+		return {
+			store
+		}
+	}
 });
 </script>
 
