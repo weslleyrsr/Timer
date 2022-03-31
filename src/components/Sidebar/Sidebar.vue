@@ -8,6 +8,7 @@
 			<ul class="menu-list">
 				<li v-for="(route, index) in routes" :key="index">
 					<router-link
+						v-if="!route.meta.hide"
 						:to="route.path"
 						class="navbar-item menu-item"
 						:class="{ 'test': route.name === currentRoute.name }"
