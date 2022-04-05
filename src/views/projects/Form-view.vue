@@ -1,4 +1,3 @@
-<!-- <template><p> &#128640;&#128679; {{ store.state.workInProgressMessage }} </p></template> -->
 <template>
 	<Form :id="id"></Form>
 </template>

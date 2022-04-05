@@ -31,7 +31,7 @@ import Project from "@/interfaces/Project";
 const store = useStore()
 
 const projects = computed(() => {
-	return store.state.projects
+	return store.state.projects.projects
 })
 
 const emit = defineEmits(['finishTask'])
@@ -42,7 +42,7 @@ const task = reactive({
 })
 
 const findProject = async (projectId: number): Promise<Project> => {
-	return await store.dispatch('findProject', projectId)
+	return await store.dispatch('projects/findProject', projectId)
 }
 
 let finishTask = async (timeInSeconds: number, timerStarted: Date): Promise<void> => {

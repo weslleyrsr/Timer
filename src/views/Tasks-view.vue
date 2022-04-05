@@ -34,7 +34,7 @@ export default defineComponent({
 	},
 	methods: {
 		saveTask(description: string, project: Project | null, timeInSeconds: number, timerStarted: Date) {
-			this.store.commit('addTask', {
+			this.store.commit('tasks/addTask', {
 				description,
 				project,
 				timeInSeconds,
@@ -47,7 +47,7 @@ export default defineComponent({
 			return this.tasks.length === 0
 		},
 		tasks(): ITask[] {
-			return this.store.state.tasks
+			return this.store.state.tasks.tasks
 		}
 	},
 	components: {
