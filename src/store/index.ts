@@ -14,13 +14,6 @@ import tasksActions from './tasks/actions';
 import tasksMutation from './tasks/mutations';
 import tasksGetters from './tasks/getters';
 
-// const store = createStore({
-//     state,
-//     getters,
-//     mutations,
-//     actions,
-// });
-
 const store = createStore({
     state,
     getters,
