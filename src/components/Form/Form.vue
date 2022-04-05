@@ -3,7 +3,7 @@
 		<div class="columns">
 			<div class="column is-flex-grow-1 is-flex" style="gap: 16px;" role="form" aria-label="Form to create a new task">
 				<div class="select">
-					<select v-model="task.project">
+					<select class="--transparent" v-model="task.project">
 						<option value="0">Select a project</option>
 						<option v-for="project in projects" :key="project.id" :value="project.id"> {{project.name}} </option>
 					</select>
@@ -31,7 +31,7 @@ import Project from "@/interfaces/Project";
 const store = useStore()
 
 const projects = computed(() => {
-	return store.state.projects
+	return store.state.projects.projects
 })
 
 const emit = defineEmits(['finishTask'])
@@ -42,7 +42,7 @@ const task = reactive({
 })
 
 const findProject = async (projectId: number): Promise<Project> => {
-	return await store.dispatch('findProject', projectId)
+	return await store.dispatch('projects/findProject', projectId)
 }
 
 let finishTask = async (timeInSeconds: number, timerStarted: Date): Promise<void> => {

@@ -10,7 +10,7 @@
 			<div class="column is-3">Project</div>
 			<div class="column is-3">Task</div>
 			<div class="column is-3">Time</div>
-			<div class="column is-3">Start</div>
+			<div class="column is-3">Started</div>
 		</div>
 		<div class="list">
 			<Task v-for="(task, index) in tasks" :key="index" :task="task" />
@@ -34,7 +34,7 @@ export default defineComponent({
 	},
 	methods: {
 		saveTask(description: string, project: Project | null, timeInSeconds: number, timerStarted: Date) {
-			this.store.commit('addTask', {
+			this.store.commit('tasks/addTask', {
 				description,
 				project,
 				timeInSeconds,
@@ -47,7 +47,7 @@ export default defineComponent({
 			return this.tasks.length === 0
 		},
 		tasks(): ITask[] {
-			return this.store.state.tasks
+			return this.store.state.tasks.tasks
 		}
 	},
 	components: {

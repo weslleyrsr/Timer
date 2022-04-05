@@ -1,13 +1,13 @@
 <template>
 	<div class="is-flex is-align-items-center is-justify-content-space-between" style="gap: 16px;">
 		<Timer :timeInSeconds="state.timeInSeconds" />
-		<button class="button" @click="start" :disabled="state.timerRunning">
+		<button class="button --transparent" @click="start" :disabled="state.timerRunning">
 			<span class="icon">
 				<i class="fas fa-play"></i>
 			</span>
 			<span>Start</span>
 		</button>
-		<button class="button" @click="stop" :disabled="!state.timerRunning">
+		<button class="button --transparent" @click="stop" :disabled="!state.timerRunning">
 			<span class="icon">
 				<i class="fas fa-stop"></i>
 			</span>

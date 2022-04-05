@@ -6,6 +6,8 @@
 
 <script setup lang="ts">
 const styles = {
-	backgroundColor: 'var(--bg-secondary--aux)'
+	backgroundColor: 'var(--bg-secondary--aux)',
+	color: 'var(--text-primary)'
+	
 }
 </script>

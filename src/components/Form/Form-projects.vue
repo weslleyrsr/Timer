@@ -56,7 +56,7 @@ const inputEmpty = computed(() => {
 onMounted(async () => {
 	if (props.id) {
 		console.log(props.id)
-		let result = await store.dispatch('findProject', parseInt(props.id));
+		let result = await store.dispatch('projects/findProject', parseInt(props.id));
 		if (result) {
 			project.name = result.name
 		} else {
@@ -81,9 +81,9 @@ const addProject = () => {
 	}
 	
 	if(props.id) {
-		store.commit('updateProject', newProject())
+		store.commit('projects/updateProject', newProject())
 	} else {
-		store.commit('addProject', newProject())
+		store.commit('projects/addProject', newProject())
 	}
 
 	router.push("/projects")

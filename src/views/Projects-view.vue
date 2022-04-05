@@ -39,11 +39,11 @@
 	const store = useStore()
 
 	const emptyList = computed(() => {
-		return !store.getters['haveProjects']
+		return !store.getters['projects/haveProjects']
 	})
 
 	const projects = computed(() => {
-		return store.state.projects
+		return store.state.projects.projects
 	})
 
 	const newProject = () => {
@@ -55,6 +55,10 @@
 
 .header {
 	padding: 1rem;
+}
+
+.header h1 {
+	color: var(--text-primary)
 }
 
 p {
