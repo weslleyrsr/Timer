@@ -10,7 +10,7 @@
 			<div class="column is-3">Project</div>
 			<div class="column is-3">Task</div>
 			<div class="column is-3">Time</div>
-			<div class="column is-3">Start</div>
+			<div class="column is-3">Started</div>
 		</div>
 		<div class="list">
 			<Task v-for="(task, index) in tasks" :key="index" :task="task" />

@@ -59,8 +59,8 @@ main.dark-theme {
 }
 
 .--transparent {
-	background: transparent;
-	color: var(--text-primary);
+	background: transparent !important;
+	color: var(--text-primary) !important;
 }
 
 .--transparent::placeholder {
