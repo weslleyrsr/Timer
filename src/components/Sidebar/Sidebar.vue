@@ -48,6 +48,12 @@
 	}
 </script>
 
+<style>
+.menu-list a {
+	color: var(--text-primary)
+}
+</style>
+
 <style scoped>
 	header {
 		padding: 1rem;

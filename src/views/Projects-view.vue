@@ -57,6 +57,10 @@
 	padding: 1rem;
 }
 
+.header h1 {
+	color: var(--text-primary)
+}
+
 p {
 	padding: 16px
 }

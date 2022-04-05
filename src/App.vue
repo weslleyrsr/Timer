@@ -51,7 +51,7 @@ main.dark-theme {
 	--bg-primary--aux: #262626;
 	--bg-secondary: #1b1d1e;
 	--bg-secondary--aux: rgb(42 42 42);
-	--text-primary: #afafaf;
+	--text-primary: #c5c5c5;
 }
 .content {
 	background-color: var(--bg-primary--aux);
